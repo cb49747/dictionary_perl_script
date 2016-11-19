@@ -43,3 +43,5 @@ Words_test.pl
 word_example.pl
 
 readme.md
+
+dictionary.txt
