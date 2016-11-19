@@ -8,11 +8,14 @@ use 5.010;
  
 =head1 My word parsing and comparing module
  
-This script needs to have 3 parameters. A dictionary file, the sequence output file, and the words output file.
-It will read the dictionary file and then take all 4 char sequences from all words in the file.  It will then 
-compare those sequences and save only the ones that happen once.  writing the sequences in one file and their
-coresponding words in the other.
-Usage is this.
+A simple perl script to read a dictionary file and find unique 4 letter sequences.
+
+A Perl module that will read a dictionary file and then generate two output files.  The first, a file of sequences and a second 
+file of words.  The sequence file will contain every sequence of 4 letters (case insensitive) that appears only once in the 
+dictionary file.  The sequence and word file will contain one entry per line and each file will match.  i.e. the sequence on 
+line 10 of the sequence file will come from the word on line 10 of the word file.
+
+sample usage.
 
 use Words qw(getwords);
 
