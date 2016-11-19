@@ -7,7 +7,7 @@ by Chris Burger
 -------------------------
 --     DESCRIPTION     --
 -------------------------
-A simple perl script to read a dictionary file and find unique 4 letter sequences
+A simple perl script to read a dictionary file and find unique 4 letter sequences.
 
 A Perl module that will read a dictionary file and then generate two output files.  The first, a file of sequences and a second 
 file of words.  The sequence file will contain every sequence of 4 letters (case insensitive) that appears only once in the 
