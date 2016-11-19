@@ -37,6 +37,9 @@ my ($message, $hash_ref) = getwords($input_file, $output_sequence_file, $output_
 --   Files Included    --
 -------------------------
 Words.pm
+
 Words_test.pl
+
 word_example.pl
-readme.txt
+
+readme.md
