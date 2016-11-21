@@ -10,6 +10,7 @@ use File::Slurp;
 use CGI qw(:standard); 
 use CGI::Carp qw ( fatalsToBrowser );
 
+### no upload file greater than 1mb
 $CGI::POST_MAX = 1024 * 1000;
 
 ## read in cgi variables and set defaults if empty
@@ -20,7 +21,7 @@ my $words_file = param('words_file') || 'words.txt';
 my $action = param('action');
 my $random_number = 1 + int rand(9999);
 
-## check if a dictionary file has been uploaded if so save it.
+## check if a dictionary file has been uploaded if so save it, else we will just use the default.
 if ($dictionary_file ne 'dictionary_default.txt' && $upload_filehandle) {
 	$dictionary_file = 'output_files/' . $dictionary_file . '.' . $random_number . '.txt';
 	open ( UPLOADFILE, ">$dictionary_file" ) or die "$!";
@@ -54,10 +55,6 @@ if ($action eq 'upload') {
 else {
 
 	my $html_data = read_file( 'template/word_example.html' );
-
-	#open (my $fh, '<', $template_file) or warn( 'Can not open template file.' );
-	#	my $html_data = <$fh>;
-	#close $fh;	
 
 	print $html_data;
 }

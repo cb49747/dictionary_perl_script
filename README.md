@@ -44,4 +44,14 @@ word_example.pl
 
 readme.md
 
-dictionary.txt
+dictionary_default.txt
+
+output_files/sequence.txt
+
+output_files/words.txt
+
+template/word_example.html
+
+template/word_example_done.html
+
+template/bootstrap/
